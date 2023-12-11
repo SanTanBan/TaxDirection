@@ -28,18 +28,21 @@
             padding: 20px;
             background-color: #fff;
         }
-        /* New styles for the vector arrow */
+
+        /* New styles for the horizontal arrow */
         .arrow {
             position: relative;
         }
 
         .arrow::before {
-            content: "\2191"; /* Unicode character for an upwards arrow */
+            content: "\2192"; /* Unicode character for a rightwards arrow */
             position: absolute;
             top: -0.5em; /* Adjust this value to place the arrow where you want */
             left: 0;
-            color: blue; /* Color of the arrow */
+            color: inherit; /* Same color as the text */
         }
+
+        
     </style>
 </head>
 <body>
