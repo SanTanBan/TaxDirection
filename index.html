@@ -28,15 +28,27 @@
             padding: 20px;
             background-color: #fff;
         }
+        /* New styles for the vector arrow */
+        .arrow {
+            position: relative;
+        }
+
+        .arrow::before {
+            content: "\2191"; /* Unicode character for an upwards arrow */
+            position: absolute;
+            top: -0.5em; /* Adjust this value to place the arrow where you want */
+            left: 0;
+            color: blue; /* Color of the arrow */
+        }
     </style>
 </head>
 <body>
     <header>
-        <h1>#TaxDirection</h1>
-        <h2>A feedback mechanism allowing Governments to develop HyperLocal projects to solve taxpayer-specific-problems holistically.</h2>
+        <h1>#<span class="arrow">TaxDirection</span>: Revolutionizing Tax from a scaler to a <span class="arrow">vector</span></h1>
+        <h2>A feedback mechanism enabling governments to develop hyperLocal projects to solve taxpayer-specific-problems holistically.</h2>
     </header>
     <div class="container">
-        <h2>Submit your Problem</h2>
+        <h2>Citizen! Submit your Problem</h2>
         <p>
             Use this Google Form to submit your Problem: 
             <ul>
