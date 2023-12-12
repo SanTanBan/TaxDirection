@@ -6,7 +6,8 @@ body {
 }
 
 .glistening-effect {
-  width: 100%;
+  align-items: center;
+  /* width: 100%; */
   background-color: gold;
   animation: glistening 2s infinite;
 }
