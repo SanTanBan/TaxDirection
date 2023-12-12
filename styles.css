@@ -10,7 +10,7 @@ body {
   width: 1000px;
   height: 100px;
   background-color: gold;
-  animation: glistening 2s infinite;
+  animation: glistening 20s infinite;
 }
 
 @keyframes glistening {
