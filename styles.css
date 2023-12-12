@@ -11,6 +11,11 @@ body {
   justify-content: center;
   /* width: 100%; */
   background-color: gold;
+  animation: glistening 3s infinite;
+}
+
+.glistening-effect_2 {
+  background-color: gold;
   animation: glistening 2s infinite;
 }
 
