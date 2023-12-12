@@ -6,11 +6,11 @@ body {
 }
 
 .glistening-effect {
-  text-align: center;
+  justify-content: center;
   width: 1000px;
-  height: 1000px;
+  height: 100px;
   background-color: gold;
-  animation: glistening 20s infinite;
+  animation: glistening 2s infinite;
 }
 
 @keyframes glistening {
