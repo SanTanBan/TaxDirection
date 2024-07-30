@@ -8,7 +8,6 @@ Presentation Date: 1st February
 
 Track: Finance and Accounting
 
+The index.html and styles.css files are for the website: https://santanban.github.io/TaxDirection/
 
-
-The index.html and styles.css files are for the website
-# https://santanban.github.io/TaxDirection/
+New pipeline with UI can be found here: https://huggingface.co/spaces/SantanuBanerjee/TaxDirection (under development)
