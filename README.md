@@ -24,8 +24,7 @@ Editor: Prof. Dr. Ramesh Chandra Das; Publisher: Routledge (Taylor & Francis)
 
 ISBN: 9781041025276 ; Chapter No.: 15
 
-Book Link: https://www.routledge.com/Economic-Growth-Price-Stability-and-Governance-Implications-of-Fiscal-and-Monetary-Policies-Global-Scenario/ChandraDas/p/book/9781041025276
-Chapter Link: https://www.taylorfrancis.com/chapters/edit/10.4324/9781003619703-18/aggregating-citizens-personalised-recommendations-tax-directions-automatic-project-proposal-development-using-nlp-enabling-sustainable-hyperlocal-governance-longevity-santanu-banerjee-tiyasa-mishra-anandita-das-atul-kumar-dubey-krishna-das
+Link: https://www.taylorfrancis.com/chapters/edit/10.4324/9781003619703-18/aggregating-citizens-personalised-recommendations-tax-directions-automatic-project-proposal-development-using-nlp-enabling-sustainable-hyperlocal-governance-longevity-santanu-banerjee-tiyasa-mishra-anandita-das-atul-kumar-dubey-krishna-das
 
 ## The current proposal in FOSS 2026 is to develop an upgraded deployable version of the HuggingFace implementation and brainstorm on how to verify users based on PAN/Taxation...
 Project Link: https://fossunited.org/hack/fosshack26/p/c6s7kea2an
