@@ -12,6 +12,7 @@ Track: Finance and Accounting
 
 ### The index.html and styles.css files are for the website: https://santanban.github.io/TaxDirection/
 ## New pipeline with UI can be found here: https://huggingface.co/spaces/SantanuBanerjee/TaxDirection
+(For sample datasets on HuggingFace, we used the MyGov portal submissions: https://github.com/SanTanBan/MyGov-Idea-Box-Suggestions-Scraping)
 ### OK Challenge Page: https://www.omdena.com/chapter-challenges/tax-allocation-manager-system
 
 
