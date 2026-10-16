@@ -1,0 +1,35 @@
+/* styles.css */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  /* Add more styling rules as needed */
+}
+
+.glistening-effect {
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  /* width: 100%; */
+  background-color: gold;
+  animation: glistening 3s infinite;
+}
+
+.glistening-effect_2 {
+  background-color: gold;
+  animation: glistening 2s infinite;
+}
+
+@keyframes glistening {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(1.1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Live results &mdash; #TaxDirection</title>
+  <meta name="description" content="Public results dashboard for #TaxDirection: aggregated taxpayer wishes clustered by problem and geography, with AI-drafted project proposals and directed-rupee totals." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- ============================ HEADER / NAV ============================ -->
+  <header class="site-header" id="top">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html">
+        <span class="brand-hash">#</span>TaxDirection
+      </a>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="index.html#how">How it works</a>
+        <a href="index.html#math">The math</a>
+        <a href="index.html#research">Research</a>
+        <a href="app.html" class="nav-cta">Launch app</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ============================ DASHBOARD HERO ============================ -->
+    <section class="dash-hero">
+      <div class="container">
+        <p class="section-eyebrow">Public results dashboard</p>
+        <h1 class="dash-title">Where citizens want their tax directed</h1>
+        <p class="dash-sub">
+          Live aggregation of taxpayer wishes, clustered by problem-domain and geography.
+          Each cluster's financial weight is the sum of directed amounts from its wishes, and an
+          AI drafts one project proposal per cluster. No login required &mdash; this view reads
+          public, row-level-security-guarded data only.
+        </p>
+      </div>
+    </section>
+
+    <!-- ============================ STATUS BANNER (config / errors) ============================ -->
+    <div class="container">
+      <div id="banner" class="banner" role="status" hidden></div>
+    </div>
+
+    <!-- ============================ HEADLINE STATS ============================ -->
+    <section class="container stats-section" aria-label="Headline statistics">
+      <div class="stats-grid" id="stats">
+        <div class="stat-card">
+          <span class="stat-label">Total directed</span>
+          <span class="stat-value" id="stat-total" data-state="loading">&hellip;</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-label">Clusters</span>
+          <span class="stat-value" id="stat-clusters" data-state="loading">&hellip;</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-label">Wishes aggregated</span>
+          <span class="stat-value" id="stat-wishes" data-state="loading">&hellip;</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ CLUSTERS ============================ -->
+    <section class="container clusters-section">
+      <div class="clusters-head">
+        <h2 class="section-title">Clusters by financial weight</h2>
+        <button id="refresh-btn" class="btn btn-ghost" type="button">Refresh</button>
+      </div>
+
+      <!-- Loading skeleton -->
+      <div id="loading" class="loading-state">
+        <div class="skeleton-card"></div>
+        <div class="skeleton-card"></div>
+        <div class="skeleton-card"></div>
+      </div>
+
+      <!-- Empty state -->
+      <div id="empty" class="empty-state" hidden>
+        <h3>No results yet</h3>
+        <p>
+          Once taxpayers submit their wishes and the aggregation pipeline runs, clustered
+          project proposals will appear here, ranked by how much tax has been directed toward each.
+        </p>
+        <a class="btn btn-primary" href="app.html">Be the first &mdash; submit a wish &rarr;</a>
+      </div>
+
+      <!-- Rendered clusters go here -->
+      <div id="clusters" class="clusters-list" hidden></div>
+    </section>
+  </main>
+
+  <!-- ============================ FOOTER ============================ -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="brand"><span class="brand-hash">#</span>TaxDirection</span>
+        <p>Revolutionizing tax from a scalar to a vector.</p>
+      </div>
+      <nav class="footer-nav" aria-label="Footer">
+        <a href="index.html">Home / explainer</a>
+        <a href="app.html">Open application</a>
+        <a href="https://github.com/SanTanBan/TaxDirection" target="_blank" rel="noopener">GitHub repository</a>
+        <a href="https://chng.it/WD4hqYxJ9d" target="_blank" rel="noopener">Change.org petition</a>
+      </nav>
+      <nav class="footer-social" aria-label="Social">
+        <a href="https://www.linkedin.com/company/omdena-kharagpur" target="_blank" rel="noopener">LinkedIn (Omdena Kharagpur)</a>
+        <a href="https://www.facebook.com/people/Omdena-Kharagpur/100086423540476/" target="_blank" rel="noopener">Facebook (Omdena Kharagpur)</a>
+      </nav>
+    </div>
+    <div class="container footer-legal">
+      <p>This dashboard reads only the public <code>clusters</code> table via the Supabase anon key, guarded by Row-Level Security.</p>
+    </div>
+  </footer>
+
+  <!-- Supabase JS v2 from jsDelivr CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <!-- Public config (placeholder URL + anon key) -->
+  <script src="config.js"></script>
+  <!-- Dashboard logic -->
+  <script src="dashboard.js"></script>
+</body>
+</html>

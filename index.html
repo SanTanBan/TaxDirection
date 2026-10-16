@@ -1,108 +1,430 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>#TaxDirection</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #FFF;
-            margin: 0;
-            padding: 0;
-        }
-        header {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 20px;
-        }
-        h1 {
-            font-size: 36px;
-        }
-        h2 {
-            font-size: 24px;
-        }
-        h3 {
-            font-size: 18px;
-        }
-        .container {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: #fff;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>#TaxDirection &mdash; Revolutionizing Tax from a scalar to a vector</title>
+  <meta name="description" content="#TaxDirection lets taxpayers direct a small fraction of their tax toward the problems they most want solved. Wishes are clustered by problem and geography, and an AI drafts one project proposal per cluster." />
+  <meta name="author" content="Santanu Banerjee" />
 
-        /* New styles for the horizontal arrow */
-        .arrow {
-            position: relative;
-            font-weight: bold;
-        }
+  <!-- Open Graph / social -->
+  <meta property="og:title" content="#TaxDirection — Revolutionizing Tax from a scalar to a vector" />
+  <meta property="og:description" content="Direct a fraction of your tax toward the problems you most want solved. Citizen wishes, clustered and turned into AI-drafted project proposals." />
+  <meta property="og:type" content="website" />
 
-        .arrow::before {
-            content: "\2192"; /* Unicode character for a rightwards arrow */
-            position: absolute;
-            top: -0.5em; /* Adjust this value to place the arrow where you want */
-            left: 0;
-            color: inherit; /* Same color as the text */
-        }
-
-        
-    </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <header>
-        <h1>#<span class="arrow">TaxDirection</span>: Revolutionizing <span class="arrow">Tax</span> from a scaler to a <span class="arrow">vector</span></h1>
-        <h2>A feedback mechanism enabling governments to develop hyperlocal projects to solve taxpayer-specific-problems holistically</h2>
-    </header>
+  <a class="skip-link" href="#main">Skip to main content</a>
 
-    <section class="glistening-effect">
-        <h2>Suggest how you wish your tax to be directed here: <a href="https://forms.gle/6CCyEZCTAKirK1HF9" target="_blank">https://forms.gle/6CCyEZCTAKirK1HF9</a></h2>
-        <h2>Vizualize the aggregated clustered outputs as project proposals here: <a href="https://github.com/SanTanBan/TaxDirection" target="_blank">https://github.com/SanTanBan/TaxDirection</a></h2>
+  <!-- ============================ HEADER / NAV ============================ -->
+  <header class="site-header" id="top">
+    <div class="container nav-wrap">
+      <a class="brand" href="#top">
+        <span class="brand-hash">#</span>TaxDirection
+      </a>
+      <nav class="site-nav" aria-label="Primary">
+        <details class="nav-menu">
+          <summary>Menu</summary>
+          <div class="nav-links">
+            <a href="#problem">Problem</a>
+            <a href="#how">How it works</a>
+            <a href="#math">The math</a>
+            <a href="#why">Why it matters</a>
+            <a href="#research">Research</a>
+            <a href="framework.html">International framework</a>
+            <a href="app.html">Open workspace</a>
+          </div>
+        </details>
+        <a href="dashboard.html" class="nav-cta">Live results</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ============================ HERO ============================ -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <p class="eyebrow">Civic-tech for participatory budgeting</p>
+        <h1 class="hero-title">
+          Revolutionizing <span class="vec">Tax</span> from a
+          <span class="scalar">scalar</span> to a <span class="vec">vector</span>.
+        </h1>
+        <p class="hero-pitch">
+          Today your tax is a single number handed to the government. #TaxDirection explores how
+          taxpayers could express priorities for a small slice of that amount &mdash; turning
+          one scalar into a directed vector of intent, subject to public policy and approval.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="app.html">
+            Launch the app &rarr;
+          </a>
+          <a class="btn btn-ghost" href="dashboard.html">See live results</a>
+        </div>
+        <p class="hero-note">
+          Free and open. Explore with fictional data; real identity verification and government adoption require approved integrations.
+        </p>
+      </div>
+
+      <!-- Decorative vector illustration: scalar dot becoming a directed vector -->
+      <div class="hero-viz" aria-hidden="true">
+        <svg viewBox="0 0 320 220" role="img">
+          <defs>
+            <marker id="arrow" markerWidth="10" markerHeight="10" refX="7" refY="3" orient="auto">
+              <path d="M0,0 L7,3 L0,6 Z" class="viz-arrowhead" />
+            </marker>
+          </defs>
+          <circle class="viz-origin" cx="60" cy="160" r="7" />
+          <line class="viz-vec viz-vec-1" x1="60" y1="160" x2="160" y2="70"  marker-end="url(#arrow)" />
+          <line class="viz-vec viz-vec-2" x1="60" y1="160" x2="230" y2="120" marker-end="url(#arrow)" />
+          <line class="viz-vec viz-vec-3" x1="60" y1="160" x2="180" y2="180" marker-end="url(#arrow)" />
+        </svg>
+      </div>
     </section>
-        
-    <img src="Annexure (Old Files with elaborate comments)/RQ.png" alt="TaxDirection submission QR">
-    
-    <section class="container">
-        <h2>Citizen! Submit your Problem</h2>
-        <h3>(alongwith the suggested solution if you have thought of one)</h3>
-        <p  class="glistening-effect">
-            <ul>
-                <li class="glistening-effect_2">Use this Google Form to submit your Problem: <a href="https://forms.gle/6CCyEZCTAKirK1HF9" target="_blank">https://forms.gle/6CCyEZCTAKirK1HF9</a></li>
-                <li>Support us on Change.org: <a href="https://chng.it/WD4hqYxJ9d" target="_blank">https://chng.it/WD4hqYxJ9d</a></li>
-            </ul>
-        </p>
-        
-        <h2>You may refer to more details about Tax Direction here:</h2>
-        <p>
-            <ul>
-                <li>OK Tax Direction WebPage: <a href="https://omdena.com/chapter-challenges/tax-allocation-system-creation-allowing-hyperlocal-government-investment-into-targeted-sustainable-developmental-solutions/" target="_blank">https://omdena.com/chapter-challenges/tax-allocation-system-creation-allowing-hyperlocal-government-investment-into-targeted-sustainable-developmental-solutions/</a></li>
-                <li>OK Tax Direction GitHub Repository: <a href="https://github.com/OmdenaAI/kharagpur-chapter-tax-allocation-system" target="_blank">https://github.com/OmdenaAI/kharagpur-chapter-tax-allocation-system</a></li>
-                <li>OK Tax Direction Notion: <a href="https://omdenadocs.notion.site/Kharagpur-India-Chapter-Tax-allocation-system-creation-allowing-hyperlocal-government-investment--667c22f2bdc343c48c5b3e1f8b1bd2fd" target="_blank">https://omdenadocs.notion.site/Kharagpur-India-Chapter-Tax-allocation-system-creation-allowing-hyperlocal-government-investment--667c22f2bdc343c48c5b3e1f8b1bd2fd</a></li>
-            </ul>
-        </p>
-            
-        <h2>The latest clustering of Tax Direction is shown below:</h2>
-        <h3>( based on MyGov.in suggestions scraped till January 2023, dataset available: <a href="https://github.com/SanTanBan/MyGov-Idea-Box-Suggestions-Scraping" target="_blank">https://github.com/SanTanBan/MyGov-Idea-Box-Suggestions-Scraping</a> )</h3>
 
-        
-        <h2>We are moving this to HuggingFace Spaces as its UI development is very easy and splendid: <a href="https://huggingface.co/spaces/SantanuBanerjee/TaxDirection" target="_blank">https://huggingface.co/spaces/SantanuBanerjee/TaxDirection</a> </h2>
+    <!-- ============================ THE PROBLEM ============================ -->
+    <section id="problem" class="section">
+      <div class="container">
+        <p class="section-eyebrow">The problem</p>
+        <h2 class="section-title">Tax is a scalar today</h2>
+        <div class="prose">
+          <p>
+            When you pay tax, you transmit exactly one piece of information: an amount. A magnitude.
+            A scalar. Everything about <em>why</em> you earned it, <em>where</em> you live, and
+            <em>which</em> problems you'd most like solved is discarded at the point of payment.
+          </p>
+          <p>
+            Governments then make spending decisions with almost no structured, per-taxpayer signal
+            of priority. Citizens, in turn, feel no line of sight between the tax they pay and the
+            outcomes they care about. The feedback loop is broken on both ends.
+          </p>
+        </div>
+
+        <div class="contrast-grid">
+          <div class="contrast-card before">
+            <h3>Tax as a scalar</h3>
+            <p class="big-symbol">&#8377; 1,00,000</p>
+            <p>One number. No direction. No stated priority.</p>
+          </div>
+          <div class="contrast-arrow" aria-hidden="true">&rarr;</div>
+          <div class="contrast-card after">
+            <h3>Tax as a vector</h3>
+            <ul class="vec-list">
+              <li><span>Clean water for my district</span><span class="vw">40%</span></li>
+              <li><span>Local school infrastructure</span><span class="vw">35%</span></li>
+              <li><span>Public transit safety</span><span class="vw">25%</span></li>
+            </ul>
+            <p>Same money &mdash; now carrying magnitude <em>and</em> direction.</p>
+          </div>
+        </div>
+      </div>
     </section>
 
-        <img src="Annexure (Old Files with elaborate comments)/Project Financial Weights_HeatMap.png" alt="Tax Tokens allocated to each Problem-Location Cluster">
-        <img src="Annexure (Old Files with elaborate comments)/SentimentScores_HeatMap_RedHigh.png" alt="Sentiment Score of each Problem-Location Cluster">
-    
-    <section>
-        <h2>OK is now on Social Media:</h2>
-        <p>
-            You can connect with Omdena Kharagpur (OK) on various social media platforms:
-            <ul>
-                <li>Follow us on FaceBook: <a href="https://www.facebook.com/people/Omdena-Kharagpur/100086423540476/" target="_blank">https://www.facebook.com/people/Omdena-Kharagpur/100086423540476/</a></li>
-                <li>We are most active on LinkedIn: <a href="https://www.linkedin.com/company/omdena-kharagpur" target="_blank">https://www.linkedin.com/company/omdena-kharagpur/</a></li>
-                <li><a href="https://chat.openai.com/share/c6e73236-7885-4355-b0bf-236d7e7c0654" target="_blank">How to create this page?</a></li>
-            </ul>
+    <!-- ============================ HOW IT WORKS ============================ -->
+    <section id="how" class="section section-alt">
+      <div class="container">
+        <p class="section-eyebrow">How it works</p>
+        <h2 class="section-title">Five steps from citizen to proposal</h2>
+        <ol class="steps">
+          <li class="step">
+            <span class="step-num">1</span>
+            <h3>Onboard</h3>
+            <p>Open a citizen account or explore a clearly labelled fictional demo. No app installation is needed.</p>
+          </li>
+          <li class="step">
+            <span class="step-num">2</span>
+            <h3>Verify identity &amp; yearly evidence</h3>
+            <p>The framework supports country-specific signed verification receipts. The demo uses fictional evidence; real authority connections, including PAN, are not yet enabled.</p>
+          </li>
+          <li class="step">
+            <span class="step-num">3</span>
+            <h3>Declare your tax</h3>
+            <p>Tell us the tax you've declared for the assessment year. This sets the pool that your directable fraction is computed from.</p>
+          </li>
+          <li class="step">
+            <span class="step-num">4</span>
+            <h3>Set your directions</h3>
+            <p>Describe the problems you want solved, each with a location and percentage. Your shares must total 100% before you confirm and lock the year.</p>
+          </li>
+          <li class="step">
+            <span class="step-num">5</span>
+            <h3>Follow shared proposals</h3>
+            <p>Submitted directions enter a batch and one problem&ndash;location cell each. Follow source-linked proposal drafts and government responses. Optional AI drafts remain subject to review.</p>
+          </li>
+        </ol>
+        <p class="section-cta">
+          <a class="btn btn-primary" href="app.html">Open the framework &rarr;</a>
         </p>
-    </section>    
+      </div>
+    </section>
+
+    <!-- ============================ THE MATH ============================ -->
+    <section id="math" class="section">
+      <div class="container">
+        <p class="section-eyebrow">The math</p>
+        <h2 class="section-title">How a wish becomes a rupee amount</h2>
+        <div class="prose">
+          <p>
+            The research model uses an illustrative <strong>Government-Allowed Percentage</strong>
+            as an admin-controlled policy setting (default <strong>5%</strong>). No participating
+            government has approved this allowance here; the demo's amounts are advisory priority
+            weights. Within that modelled slice, your direction weights decide the split.
+          </p>
+        </div>
+
+        <figure class="formula-card">
+          <figcaption>Directed amount per wish</figcaption>
+          <div class="formula">
+            <code>directed_amount_inr = declared_tax_inr &times; (GOVT_ALLOWED_PCT / 100) &times; (normalized_weight_pct / 100)</code>
+          </div>
+          <div class="formula sub">
+            <code>normalized_weight_pct = raw_weight_pct &times; 100 / sum(raw weights of that user's wishes)</code>
+          </div>
+        </figure>
+
+        <div class="worked-example">
+          <h3>Worked example</h3>
+          <ul class="kv">
+            <li><span class="k">Declared tax</span><span class="v">&#8377; 1,00,000</span></li>
+            <li><span class="k">Government-allowed percentage</span><span class="v">5%</span></li>
+            <li><span class="k">Total directable pool</span><span class="v">&#8377; 5,000</span></li>
+            <li><span class="k">This wish's normalized weight</span><span class="v">50%</span></li>
+          </ul>
+          <p class="example-result">
+            <span>Directed amount</span>
+            <strong>&#8377; 1,00,000 &times; 0.05 &times; 0.50 = &#8377; 2,500</strong>
+          </p>
+          <p class="example-note">
+            So a citizen with &#8377;1,00,000 of declared tax, under a 5% rule, who places half of their
+            weight on one wish, directs <strong>&#8377;2,500</strong> toward that problem. The remaining
+            weights distribute the rest of the &#8377;5,000 pool across their other wishes.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ WHY IT MATTERS ============================ -->
+    <section id="why" class="section section-alt">
+      <div class="container">
+        <p class="section-eyebrow">Why it matters</p>
+        <h2 class="section-title">Five percent is the gamechanger</h2>
+        <div class="prose">
+          <p>
+            A proposed slice of <strong>5&ndash;10%</strong> offers a policy question to evaluate
+            &mdash; the government decides whether to adopt any rule and how large the slice could
+            be. The initial system is advisory. The idea converts tax from a silent transfer into
+            a rich, structured stream of citizen priorities: more data, more insight, and far more
+            accountability, year after year, budget after budget.
+          </p>
+        </div>
+
+        <blockquote class="endorsement">
+          <p>
+            &ldquo;Maybe not 100% of the amount, but say 5% can be allocated to projects of their choice.&rdquo;
+          </p>
+          <footer>
+            <strong>Prof. M. V. Rajeev Gowda</strong>
+            <span>
+              Former Member of Parliament, Rajya Sabha (Karnataka, 2014&ndash;2020);
+              Professor at IIM Bangalore (2000&ndash;2014).
+              Shared while discussing #TaxDirection at
+              <a href="https://zugrama.org/" target="_blank" rel="noopener">Zu~Grama</a>, early 2025.
+            </span>
+          </footer>
+        </blockquote>
+
+        <p class="prose">
+          That conversation reframed the project. #TaxDirection began as a feedback system to tell the
+          government which decisions to make. Allowing even 5% of each person's tax to be allocated to
+          a specific problem they care about turns that feedback into <strong>direct, AI-enabled,
+          holistic policy development</strong> &mdash; viable to pitch in leading democracies as
+          taxpayer-influenced yearly budgeting.
+        </p>
+      </div>
+    </section>
+
+    <!-- ============================ RESEARCH ============================ -->
+    <section id="research" class="section">
+      <div class="container">
+        <p class="section-eyebrow">Research &amp; academic record</p>
+        <h2 class="section-title">Peer-reviewed and presented</h2>
+
+        <div class="research-grid">
+          <article class="research-card">
+            <h3>Book chapter</h3>
+            <p class="rc-title">
+              Aggregating Citizens' Personalised Recommendations into Tax Directions for automatic
+              Project Proposal development using NLP, enabling Sustainable Hyperlocal Governance and Longevity
+            </p>
+            <p class="rc-meta">
+              Santanu Banerjee, Tiyasa Mishra, Anandita Das, Atul Kumar Dubey, Krishna Das<br />
+              Editor: Prof. Dr. Ramesh Chandra Das &middot; Publisher: Routledge (Taylor &amp; Francis)<br />
+              ISBN 9781041025276 &middot; Chapter 15
+            </p>
+            <a class="rc-link" href="https://www.taylorfrancis.com/chapters/edit/10.4324/9781003619703-18/aggregating-citizens-personalised-recommendations-tax-directions-automatic-project-proposal-development-using-nlp-enabling-sustainable-hyperlocal-governance-longevity-santanu-banerjee-tiyasa-mishra-anandita-das-atul-kumar-dubey-krishna-das" target="_blank" rel="noopener">View on Taylor &amp; Francis &rarr;</a>
+          </article>
+
+          <article class="research-card">
+            <h3>Conference</h3>
+            <p class="rc-title">
+              10th Management Doctoral Colloquium &amp; VGSOM Research Scholars Day (MDC-VRS 2024)
+            </p>
+            <p class="rc-meta">
+              Vinod Gupta School of Management, IIT Kharagpur, India<br />
+              Track: Finance and Accounting &middot; Presented 1st February 2024
+            </p>
+            <a class="rc-link" href="https://www.linkedin.com/posts/vgsomiitkgp_mdc-vrs-2024-activity-7142869683329810432-Hc_y" target="_blank" rel="noopener">Conference announcement &rarr;</a>
+          </article>
+
+          <article class="research-card">
+            <h3>FOSS United 2026</h3>
+            <p class="rc-title">
+              Building a deployable upgrade of the Hugging Face implementation, including PAN/taxation-based user verification.
+            </p>
+            <p class="rc-meta">Current open-source proposal under FOSS Hack 26.</p>
+            <a class="rc-link" href="https://fossunited.org/hack/fosshack26/p/c6s7kea2an" target="_blank" rel="noopener">View the project &rarr;</a>
+          </article>
+        </div>
+
+        <h3 class="archival-heading">Archival artifacts in this repository</h3>
+        <p class="prose">
+          The original analysis ran on public suggestions scraped from the MyGov Idea Box portal
+          (till January 2023). The following materials are preserved in this repository for reference:
+        </p>
+        <ul class="archival-links">
+          <li>
+            <a href="Annexure (Old Files with elaborate comments)/TaxDirection from Feedback to Visualization (original comments).ipynb" target="_blank" rel="noopener">
+              Notebook: TaxDirection &mdash; from feedback to visualization (original comments)
+            </a>
+          </li>
+          <li>
+            <a href="Annexure (Old Files with elaborate comments)/Project Financial Weights_HeatMap.png" target="_blank" rel="noopener">
+              Heatmap: tax tokens allocated to each problem&ndash;location cluster
+            </a>
+          </li>
+          <li>
+            <a href="Annexure (Old Files with elaborate comments)/SentimentScores_HeatMap_RedHigh.png" target="_blank" rel="noopener">
+              Heatmap: sentiment score of each problem&ndash;location cluster
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/SanTanBan/MyGov-Idea-Box-Suggestions-Scraping" target="_blank" rel="noopener">
+              Dataset: MyGov Idea Box suggestions scraping
+            </a>
+          </li>
+        </ul>
+
+        <figure class="heatmaps">
+          <img src="Annexure (Old Files with elaborate comments)/Project Financial Weights_HeatMap.png"
+               alt="Heatmap of tax tokens allocated to each problem-location cluster" loading="lazy" />
+          <img src="Annexure (Old Files with elaborate comments)/SentimentScores_HeatMap_RedHigh.png"
+               alt="Heatmap of sentiment score of each problem-location cluster" loading="lazy" />
+          <figcaption>
+            Early clustering output: financial weights (left) and sentiment scores (right) across
+            problem&ndash;location clusters, from the MyGov dataset.
+          </figcaption>
+        </figure>
+
+        <h3 class="archival-heading">Original participation &amp; project history</h3>
+        <p class="prose">The original Google Form, submission QR code and page-building reference remain available below. These historical resources are separate from the new fictional demonstration workspace.</p>
+        <ul class="archival-links">
+          <li><a href="https://forms.gle/6CCyEZCTAKirK1HF9" target="_blank" rel="noopener noreferrer">Original Google Form: submit your problem and an optional suggested solution</a></li>
+          <li><a href="Annexure (Old Files with elaborate comments)/RQ.png" target="_blank" rel="noopener noreferrer">Original submission QR code</a></li>
+          <li><a href="https://chat.openai.com/share/c6e73236-7885-4355-b0bf-236d7e7c0654" target="_blank" rel="noopener noreferrer">Historical reference: how the original page was created</a></li>
+          <li><a href="https://huggingface.co/spaces/SantanuBanerjee/TaxDirection" target="_blank" rel="noopener noreferrer">Hugging Face Space: application source and runtime</a></li>
+          <li><a href="legacy.html">Archived original TaxDirection webpage</a></li>
+        </ul>
+        <figure class="submission-qr"><img src="Annexure (Old Files with elaborate comments)/RQ.png" alt="Original TaxDirection Google Form submission QR code" width="200" height="200" loading="lazy"><figcaption>Original submission QR, preserved from the previous public site.</figcaption></figure>
+
+        <h3 class="archival-heading">Omdena Kharagpur (OK) background</h3>
+        <ul class="archival-links">
+          <li><a href="https://omdena.com/chapter-challenges/tax-allocation-system-creation-allowing-hyperlocal-government-investment-into-targeted-sustainable-developmental-solutions/" target="_blank" rel="noopener">OK Tax Direction challenge page</a></li>
+          <li><a href="https://github.com/OmdenaAI/kharagpur-chapter-tax-allocation-system" target="_blank" rel="noopener">OK Tax Direction GitHub repository</a></li>
+          <li><a href="https://omdenadocs.notion.site/Kharagpur-India-Chapter-Tax-allocation-system-creation-allowing-hyperlocal-government-investment--667c22f2bdc343c48c5b3e1f8b1bd2fd" target="_blank" rel="noopener">OK Tax Direction Notion workspace</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============================ GET INVOLVED ============================ -->
+    <section id="involved" class="section section-alt">
+      <div class="container">
+        <p class="section-eyebrow">Get involved</p>
+        <h2 class="section-title">Three ways to help</h2>
+        <div class="involve-grid">
+          <a class="involve-card" href="https://chng.it/WD4hqYxJ9d" target="_blank" rel="noopener">
+            <h3>Sign the petition</h3>
+            <p>Back the idea on Change.org and help make taxpayer-directed budgeting a mainstream policy ask.</p>
+            <span class="involve-go">Support on Change.org &rarr;</span>
+          </a>
+          <a class="involve-card" href="https://github.com/SanTanBan/TaxDirection" target="_blank" rel="noopener">
+            <h3>Contribute code</h3>
+            <p>The platform is free and open. Browse the source, file issues, and send pull requests.</p>
+            <span class="involve-go">View on GitHub &rarr;</span>
+          </a>
+          <a class="involve-card" href="app.html">
+            <h3>Submit your wishes</h3>
+            <p>Explore fictional annual directions, collective priorities and government follow-up. Real identity integrations remain a partnership requirement.</p>
+            <span class="involve-go">Open the citizen workspace &rarr;</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================ FOOTER ============================ -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="brand"><span class="brand-hash">#</span>TaxDirection</span>
+        <p>Revolutionizing tax from a scalar to a vector.</p>
+      </div>
+      <nav class="footer-nav" aria-label="Footer">
+        <a href="dashboard.html">Live results dashboard</a>
+        <a href="app.html">Open application</a>
+        <a href="https://github.com/SanTanBan/TaxDirection" target="_blank" rel="noopener">GitHub repository</a>
+        <a href="https://chng.it/WD4hqYxJ9d" target="_blank" rel="noopener">Change.org petition</a>
+      </nav>
+      <nav class="footer-social" aria-label="Social">
+        <a href="https://www.linkedin.com/company/omdena-kharagpur" target="_blank" rel="noopener">LinkedIn (Omdena Kharagpur)</a>
+        <a href="https://www.facebook.com/people/Omdena-Kharagpur/100086423540476/" target="_blank" rel="noopener">Facebook (Omdena Kharagpur)</a>
+      </nav>
+    </div>
+    <div class="container footer-legal">
+      <p>Open-source civic technology. The demonstration uses fictional data; it does not verify real tax IDs, collect payments or redirect tax revenue.</p>
+    </div>
+  </footer>
+
+  <!-- Minimal progressive enhancement: gentle reveal-on-scroll.
+       No framework. Content is fully visible without JS; this only
+       adds a fade-in when JS + IntersectionObserver are available. -->
+  <script>
+    (function () {
+      var prefersReduced = window.matchMedia &&
+        window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      if (prefersReduced || !("IntersectionObserver" in window)) return;
+
+      var targets = document.querySelectorAll(
+        ".section-title, .prose, .steps, .contrast-grid, .formula-card, " +
+        ".worked-example, .endorsement, .research-grid, .heatmaps, .involve-grid"
+      );
+      targets.forEach(function (el) { el.classList.add("reveal"); });
+
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            io.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12 });
+
+      targets.forEach(function (el) { io.observe(el); });
+    })();
+  </script>
 </body>
 </html>
